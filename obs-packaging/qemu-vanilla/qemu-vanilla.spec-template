@@ -113,10 +113,10 @@ done
 %defattr(-,root,root,-)
 /usr/bin/qemu-vanilla-ga
 /usr/bin/qemu-vanilla-pr-helper
-%ifarch x86_64
-/usr/bin/qemu-vanilla-system-x86_64
-%else
+%ifarch ppc64le
 /usr/bin/qemu-vanilla-system-ppc64
+%else
+/usr/bin/qemu-vanilla-system-%{_arch}
 %endif
 /usr/bin/virtfs-vanilla-proxy-helper
 %dir /usr/libexec
